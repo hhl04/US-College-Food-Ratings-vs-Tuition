@@ -13,6 +13,15 @@ const chartHeight = height - margin.top - margin.bottom;
 const chart = svg.append("g")
   .attr("transform", `translate(${margin.left + 30}, ${margin.top})`);
 
+  // Adding the title
+svg.append("text")
+.attr("x", width / 2)
+.attr("y", margin.top / 2)
+.attr("text-anchor", "middle")
+.style("font-size", "16px")
+.style("font-weight", "bold")
+.text("Food Ratings vs Change in Tuition Fee (5 Years)");
+
 // Create a tooltip
 const tooltip = d3.select("body")
   .append("div")
