@@ -28,7 +28,7 @@ const tooltip = d3.select("body")
 d3.csv("average_tuition_by_grade.csv").then(data => {
   // Parse the data
   data.forEach(d => {
-    d["Change in Tuition Fee (5 Years)"] = +d["Change in Tuition Fee (5 Years)"]; // Convert to number
+    d["Change in Tuition Fee (5 Years)"] = +d["Average Change in Tuition Fee (5 Years)"]; // Convert to number
   });
 
   // Manually adjust the order of grades
