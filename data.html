@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="button-container">
+        <button class="tablink" onclick="location.href='index.html'"><b>Introduction</b></button>
+        <button class="tablink" onclick="location.href='data.html'"><b>Data Analysis</b></button>
+        <button class="tablink" onclick="location.href='summary.html'"><b>Summary</b></button>
+    </div>
+
+    <main>
+        <div>
+            <h1 class="centeredtext">Data Overview</h1>
+            <p>add stuff here about the data</p>
+        </div>
+
+        <div>
+            <h1 class="center">Food Rating and Tuition Increase</h1>
+        </div>
+
+        <div class='container'>
+            <div class = 'image'>
+                <iframe src="D3 Graph Project\Barplot\index.html" width="100%" height="500px" frameborder="0"></iframe>
+            </div>
+            <div class='text'>
+                <p> First, we have an interactive overview comparing the food rating -
+                    a standardized review of their dining hall quality with a letter grade
+                    ranging from D-A+ - of an institution to the change in their tuition fees over a five year
+                    period. What we found is that overall, there is no significant correlation between
+                    food rating and tuition increases over a five year period. For instance, insitutions with a 
+                    D rating experienced average tuition increases of 4.5k over five years, while those
+                    with a C, B, A, and A+ rating saw a 3.8k, 4.2k, 4.3k, and 4.6k increase respectivelly.
+                    So while the insitutions with the highest food rating did see the greatest tuition jump, there was
+                    no significant trend in the variation between the different grades.
+                </p>
+                <p class='text'> Overall, this indicates that other factors are more important in the determinance of a good food score,
+                    which can include overall tuition, location, or student population over tuition change over a five year time 
+                    period in particular.</p>
+            </div>  
+        </div>  
+
+        <div class = 'container'>
+            <div class = 'image'>
+                <iframe src="D3 Graph Project\Scatterplot\index.html" width="100%" height="500px" frameborder="0"></iframe>
+            </div>
+            <div class = 'text'>
+                <p> After examining the relationship between average tuition increase
+                    and food rating, we wanted to further investigate the relationship by
+                    examining the relationship with a series of scatter plots. Unlike the previous
+                    visualization, this no longer evaluates the different buckets of food ratings by an 
+                    average, but instead by displaying each instiution as a data point on the graph. What we discovered
+                    is that the scatter plot reinofrced the conlcusion that there was no clear correlation between
+                    a university's food rating and tuition increase over a five year period. What we found is that
+                    each food rating similarly displayed a very wide range of tuition changes. As a result, it is 
+                    apparent that the lack of correlation is not due to a sufficiently diverse selection of colleges, but 
+                    because food rating is independent of the movement of tuition changes over a short term period.
+                </p>
+            </div>  
+        </div>  
+    </main>
+    
+</body>
+</html>
