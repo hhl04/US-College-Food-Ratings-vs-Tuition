@@ -15,27 +15,153 @@
     </div>
 
     <main>
-        <div>
-            <h1 class="centeredtext">Data Overview</h1>
-            <p>add stuff here about the data</p>
+        <div style="margin-top: 100px;">
+            <h1 class="center">Data Overview</h1>
         </div>
 
-        <div>
-            <h1 class="center">Food Rating and Tuition Increase</h1>
+        <div class='text'>
+            <p>We collect the list of all colleges and universities from an online source:
+                <a href="https://public.opendatasoft.com/explore/dataset/us-colleges-and-universities/export/?flg=en-us" target="_blank">
+                    https://public.opendatasoft.com/explore/dataset/us-colleges-and-universities/export/?flg=en-us
+                </a>
+                The source above provides us basic information regarding every university in the country, which would come
+                incredibly handy when it comes to extraction for visualisation.
+                Then, we proceed to clean the data, removing all the unnecessary data columns as well as schools that are
+                either inactive (-999 students) or have too small of a population (less than 1000 students) so that we can
+                have the most viable dataset to work with. We then scrape the food satisfaction and quality (measured using
+                various metrics, such as overall grading, number of dining halls, opening hours, etc). These two datasets will
+                then be merged into one and will be used to later determine what are the factors that have the strongest
+                influence on how students are feeling about their nutrition quality
+            </p>
+        </div>
+
+        <div style="margin-top: 25px; margin-bottom: 25px">
+            <h1 class="center">Bird's Eye View</h1>
         </div>
 
         <div class='container'>
-            <div class = 'image'>
-                <iframe src="D3 Graph Project\Barplot\index.html" width="100%" height="500px" frameborder="0"></iframe>
+            <div class = 'image', style="margin-left: 40px">
+                <iframe src="plot_3.html" width="100%" height="500px" frameborder="0"></iframe>
             </div>
-            <div class='text'>
-                <p> First, we have an interactive overview comparing the food rating -
+            <div class='text', style = "margin-right: 25px">
+                <p> First, we have a choropleth map that visualizes the average food rating across different U.S. states. 
+                    Each state is shaded based on its average rating, with darker colors representing higher ratings. 
+                    This map allows for a quick geographic overview of food quality by state. <br>
+
+                    At a glance, we can see which regions generally have higher or lower food ratings. 
+                    For example, states with darker shades may indicate areas with better-rated food options, 
+                    while lighter shades suggest regions with lower average ratings. 
+                    This visualization helps highlight potential regional trends in food quality, 
+                    prompting further exploration into factors that might contribute to these differences, 
+                    such as local policies, demographics, or cost of living.
+                </p>
+                <p class='text'> Overall, this indicates that other factors are more important in the determinance of a good food score,
+                    which can include overall tuition, location, or student population over tuition change over a five year time 
+                    period in particular.</p>
+            </div>  
+        </div>
+
+        <div class='container', style="margin-top: 25px">
+            <div class = 'image', style = "margin-left: 40px">
+                <iframe src="plot_4.html" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+            <div class='text', style = "margin-right: 25px">
+                <p> This plot examines the relationship between tuition costs and food ratings across schools. 
+                    Each dot represents a school, with the x-axis showing the total tuition cost for in-state students 
+                    living off-campus and the y-axis displaying the food rating.
+
+                    We can see that food ratings are spread across all tuition levels, 
+                    with no clear trend linking higher tuition to better food ratings. 
+                    This suggests that schools with higher tuition don’t necessarily provide better-rated food options. <br>
+                    
+                    The visualization raises an interesting question: Do other factors, such as campus location 
+                    or student preferences, play a more significant role in determining food satisfaction? 
+
+                    Overall, this plot highlights that price alone may not dictate the quality of college food services.
+                </p>
+            </div>  
+        </div>
+
+        <div style="margin-top: 25px; margin-bottom: 25px">
+            <h1 class="center">A Deeper Look</h1>
+        </div>  
+
+        <div class='container'>
+            <div class = 'image', style = "margin-left: 40px">
+                <iframe src="plot_1_2.html" width="100%" height="500px" frameborder="0"></iframe>
+            </div>
+            <div class='text', style = "margin-right: 25px">
+                <p> These side-by-side scatter plots compare food ratings against total tuition costs for in-state students living on campus, 
+                    focusing on schools over $80,000. The x-axis represents the city population, 
+                    while the y-axis shows the total tuition cost. The left plot covers the 2022-2023 academic year, 
+                    and the right one represents 2021-2022. <br>
+
+                    The color-coded dots in the 2022-2023 plot represent different food rating grades, allowing us to see if higher tuition 
+                    correlates with better-rated food options. However, no strong pattern emerges, as various food grades 
+                    appear across the tuition range, regardless of city size. The 2021-2022 plot, though more straightforward
+                    without color differentiation, similarly shows that city population doesn’t significantly impact 
+                    tuition or food ratings. These plots suggest that tuition costs and city size may not be reliable 
+                    indicators of food quality, highlighting the variability in factors influencing food ratings across 
+                    campuses.
+                </p>
+            </div>  
+        </div>
+
+        <div class='container'>
+            <div class="image", style = "margin-left: 40px">
+                <img src="plot_5.png" alt="Plot 5" width="75%" height="600px">
+            </div>
+            
+            <div class='text', style = "margin-right: 25px">
+                <p> This bar chart displays the average food rating for each letter grade category, 
+                    highlighting the difference in quality across ratings. "A+" grades, shown at the top, 
+                    have the highest average rating, which suggests these establishments maintain a higher 
+                    standard. In contrast, grades like "C" and "D" are notably lower, reinforcing that lower 
+                    grades often correlate with lower food quality. <br>
+
+                    The gradient color scheme visually reinforces the progression from high to low ratings, 
+                    making it easy to compare categories at a glance. This visualization clearly shows how 
+                    food quality decreases as the letter grade drops, providing a straightforward look into 
+                    the relationship between grades and average food ratings.
+                </p>
+            </div>  
+        </div>
+
+        <div class='container', style="margin-top: 25px">
+            <div class = 'image', style = "margin-left: 40px">
+                <iframe src="plot_6.html" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+            <div class='text', style = "margin-right: 25px">
+                <p> This interactive scatter plot explores the relationship between food ratings and total prices for 
+                    in-state students living off-campus. Each color represents a different grade, with size showing 
+                    distinctions within each grade. By selecting specific grades, we can see how ratings and costs vary. <br>
+
+                    Notably, grades like "A" and "A+" cover a broader range of ratings and prices, suggesting that 
+                    higher-rated food establishments may come with a premium. Meanwhile, lower grades like "C" and "D" 
+                    tend to cluster in the lower price range, indicating that cheaper establishments often receive lower 
+                    ratings. This visualization invites us to question whether higher prices correlate with better quality 
+                    or if other factors influence student perceptions of value.
+                </p>
+            </div>  
+        </div>
+
+
+        <div style="margin-top: 25px; margin-bottom: 25px">
+            <h1 class="center">Food Rating and Tuition Increase</h1>
+        </div>  
+
+        <div class='container'>
+            <div class = 'image', style = "margin-left: 40px">
+                <iframe src="D3 Graph Project\Barplot\index.html" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+            <div class='text', style = "margin-right: 25px">
+                <p> This is an interactive overview comparing the food rating -
                     a standardized review of their dining hall quality with a letter grade
                     ranging from D-A+ - of an institution to the change in their tuition fees over a five year
                     period. What we found is that overall, there is no significant correlation between
-                    food rating and tuition increases over a five year period. For instance, insitutions with a 
-                    D rating experienced average tuition increases of 4.5k over five years, while those
-                    with a C, B, A, and A+ rating saw a 3.8k, 4.2k, 4.3k, and 4.6k increase respectivelly.
+                    food rating and tuition increases over a five year period. <br>
+                    For instance, insitutions with a D rating experienced average tuition increases of 4.5k over five years, while those
+                    with a C, B, A, and A+ rating saw a 3.8k, 4.2k, 4.3k, and 4.6k increase respectivelly. <br>
                     So while the insitutions with the highest food rating did see the greatest tuition jump, there was
                     no significant trend in the variation between the different grades.
                 </p>
@@ -46,10 +172,10 @@
         </div>  
 
         <div class = 'container'>
-            <div class = 'image'>
+            <div class = 'image', style = "margin-left: 40px">
                 <iframe src="D3 Graph Project\Scatterplot\index.html" width="100%" height="500px" frameborder="0"></iframe>
             </div>
-            <div class = 'text'>
+            <div class = 'text', style = "margin-right: 25px">
                 <p> After examining the relationship between average tuition increase
                     and food rating, we wanted to further investigate the relationship by
                     examining the relationship with a series of scatter plots. Unlike the previous
